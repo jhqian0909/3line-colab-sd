@@ -136,7 +136,7 @@ function install_perf_tools {
 
 function install {
     #Prepare runtime
-    safe_git https://github.com/camenduru/stable-diffusion-webui $BASEPATH v2.1
+    safe_git https://github.com/jhqian0909/stable-diffusion-webui $BASEPATH v2.1
     safe_git https://huggingface.co/embed/negative $BASEPATH/embeddings/negative
     safe_git https://huggingface.co/embed/lora $BASEPATH/models/Lora/positive
     safe_fetch https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth $BASEPATH/models/ESRGAN 4x-UltraSharp.pth
