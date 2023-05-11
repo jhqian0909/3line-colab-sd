@@ -140,27 +140,29 @@ function install {
     safe_git https://huggingface.co/embed/negative $BASEPATH/embeddings/negative
     safe_git https://huggingface.co/embed/lora $BASEPATH/models/Lora/positive
     safe_fetch https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth $BASEPATH/models/ESRGAN 4x-UltraSharp.pth
-    safe_fetch https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py $BASEPATH/scripts run_n_times.py
-    safe_git https://github.com/deforum-art/deforum-for-automatic1111-webui $BASEPATH/extensions/deforum-for-automatic1111-webui
-    safe_git https://github.com/camenduru/stable-diffusion-webui-images-browser $BASEPATH/extensions/stable-diffusion-webui-images-browser
-    safe_git https://github.com/camenduru/stable-diffusion-webui-huggingface $BASEPATH/extensions/stable-diffusion-webui-huggingface
     safe_git https://github.com/camenduru/sd-civitai-browser $BASEPATH/extensions/sd-civitai-browser
     safe_git https://github.com/kohya-ss/sd-webui-additional-networks $BASEPATH/extensions/sd-webui-additional-networks
     safe_git https://github.com/Mikubill/sd-webui-controlnet $BASEPATH/extensions/sd-webui-controlnet
-    safe_git https://github.com/fkunn1326/openpose-editor $BASEPATH/extensions/openpose-editor
-    safe_git https://github.com/jexom/sd-webui-depth-lib $BASEPATH/extensions/sd-webui-depth-lib
-    safe_git https://github.com/hnmr293/posex $BASEPATH/extensions/posex
-    safe_git https://github.com/nonnonstop/sd-webui-3d-open-pose-editor $BASEPATH/extensions/sd-webui-3d-open-pose-editor
-    safe_git https://github.com/camenduru/sd-webui-tunnels $BASEPATH/extensions/sd-webui-tunnels
-    safe_git https://github.com/etherealxx/batchlinks-webui $BASEPATH/extensions/batchlinks-webui
-    safe_git https://github.com/camenduru/stable-diffusion-webui-catppuccin $BASEPATH/extensions/stable-diffusion-webui-catppuccin
     safe_git https://github.com/KohakuBlueleaf/a1111-sd-webui-locon $BASEPATH/extensions/a1111-sd-webui-locon
-    safe_git https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg $BASEPATH/extensions/stable-diffusion-webui-rembg
-    safe_git https://github.com/ashen-sensored/stable-diffusion-webui-two-shot $BASEPATH/extensions/stable-diffusion-webui-two-shot
-    safe_git https://github.com/camenduru/sd_webui_stealth_pnginfo $BASEPATH/extensions/sd_webui_stealth_pnginfo
-    safe_git https://github.com/thomasasfk/sd-webui-aspect-ratio-helper  $BASEPATH/extensions/sd-webui-aspect-ratio-helper
-    safe_git https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN $BASEPATH/extensions/stable-diffusion-webui-localization-zh_CN
-    safe_git https://github.com/AI-skimos/sd-webui-prompt-sr-range $BASEPATH/extensions/sd-webui-prompt-sr-range
+    
+#     safe_git https://github.com/fkunn1326/openpose-editor $BASEPATH/extensions/openpose-editor
+#     safe_git https://github.com/jexom/sd-webui-depth-lib $BASEPATH/extensions/sd-webui-depth-lib
+#     safe_git https://github.com/hnmr293/posex $BASEPATH/extensions/posex
+#     safe_git https://github.com/nonnonstop/sd-webui-3d-open-pose-editor $BASEPATH/extensions/sd-webui-3d-open-pose-editor
+#     safe_git https://github.com/camenduru/sd-webui-tunnels $BASEPATH/extensions/sd-webui-tunnels
+#     safe_git https://github.com/etherealxx/batchlinks-webui $BASEPATH/extensions/batchlinks-webui
+#     safe_git https://github.com/camenduru/stable-diffusion-webui-catppuccin $BASEPATH/extensions/stable-diffusion-webui-catppuccin
+#     safe_git https://github.com/AUTOMATIC1111/stable-diffusion-webui-rembg $BASEPATH/extensions/stable-diffusion-webui-rembg
+#     safe_git https://github.com/ashen-sensored/stable-diffusion-webui-two-shot $BASEPATH/extensions/stable-diffusion-webui-two-shot
+#     safe_git https://github.com/camenduru/sd_webui_stealth_pnginfo $BASEPATH/extensions/sd_webui_stealth_pnginfo
+#     safe_git https://github.com/thomasasfk/sd-webui-aspect-ratio-helper  $BASEPATH/extensions/sd-webui-aspect-ratio-helper
+#     safe_git https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN $BASEPATH/extensions/stable-diffusion-webui-localization-zh_CN
+#     safe_git https://github.com/AI-skimos/sd-webui-prompt-sr-range $BASEPATH/extensions/sd-webui-prompt-sr-range
+#     safe_fetch https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py $BASEPATH/scripts run_n_times.py
+#     safe_git https://github.com/deforum-art/deforum-for-automatic1111-webui $BASEPATH/extensions/deforum-for-automatic1111-webui
+#     safe_git https://github.com/camenduru/stable-diffusion-webui-images-browser $BASEPATH/extensions/stable-diffusion-webui-images-browser
+#     safe_git https://github.com/camenduru/stable-diffusion-webui-huggingface $BASEPATH/extensions/stable-diffusion-webui-huggingface
+
     reset_repos $BASEPATH all
 
     #Download Controlnet Models
@@ -170,8 +172,8 @@ function install {
     #safe_fetch https://huggingface.co/ckpt/ControlNet-v1-1/resolve/main/control_v11p_sd15_seg_fp16.safetensors $BASEPATH/extensions/sd-webui-controlnet/models control_v11p_sd15_seg_fp16.safetensors
 
     #Download Model & VAE
-    safe_fetch https://huggingface.co/XpucT/Deliberate/resolve/main/Deliberate_v2.safetensors $BASEPATH/models/Stable-diffusion Deliberate_v2.safetensors
-    safe_fetch https://huggingface.co/Yukihime256/840000/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt $BASEPATH/models/VAE vae-ft-mse-840000-ema-pruned.ckpt
+    safe_fetch https://huggingface.co/Neburozakusu/civitai_deposit/resolve/main/perfectWorld_v2Baked.safetensors $BASEPATH/models/Stable-diffusion perfectWorld_v2Baked.safetensors
+    safe_fetch https://huggingface.co/nolanaatama/chomni/resolve/main/ulzzang-6500.pt $BASEPATH/embeddings ulzzang-6500.pt
 
     #Install Dependencies
     sed_for installation $BASEPATH
